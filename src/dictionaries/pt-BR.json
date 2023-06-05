@@ -1,0 +1,11 @@
+{
+    "welcome": {
+      "helloWorld": "Ola mundo",
+      "happyYear": "feliz {{ year }}!"
+    },
+    "nav": {
+      "about": "Sobre",
+      "contact": "Contato",
+      "work": "Trabalho"
+    }
+}
