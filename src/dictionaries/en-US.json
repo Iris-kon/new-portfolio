@@ -1,11 +1,44 @@
 {
-    "welcome": {
-      "helloWorld": "Hello World, eh?",
-      "happyYear": "Happy {{ year }}!"
-    },
     "nav": {
       "about": "About",
       "contact": "Contact",
       "work": "Work"
+    },
+    "hero": {
+      "line": "Íris Oliveira",
+      "title": "Full Stack Developer",
+      "subtitle": "Developer ready for new challenges - Transforming ideas into reality with ReactJs, React Native, and Node.js!",
+      "allWorks": "See my works!"
+    },
+     "habilities": {
+      "front": "With my skills in React and NextJS, I am able to create amazing interfaces with a focus on high-quality user experiences. With my extensive experience in developing mobile applications using React Native, I have the ability to create engaging and native experiences on mobile devices. The combination of these technologies enables me to deliver visually appealing, functional, and consistent solutions across multiple platforms, providing an exceptional user experience.",
+      "server": "I possess a strong expertise in developing REST APIs using Node.js and excel in leveraging the full capabilities of frameworks such as NestJS and Loopback 4. These powerful tools empower me to construct resilient and highly scalable services that efficiently cater to project requirements. With my proficiency in these technologies, I am well-equipped to deliver robust solutions that meet the demands of any project effectively.",
+      "game": "With my experience and knowledge to build engaging and interactive games, making full use of all the features and capabilities that the Unity platform offers. I am familiar with game programming and design concepts, enabling me to create fun and immersive experiences for players. I am constantly updating my skills and keeping up with the latest trends and advancements in the gaming industry to deliver high-quality products."
+    },
+    "work": {
+      "best": "Best works",
+      "all": "All works"
+    },
+    "contact": {
+      "title": "Lets work together",
+      "paragraph": "Are you ready to collaborate on exciting projects? Let\u2019s connect and bring your ideas to life! Feel free to reach out to me today and let\u2019s discuss how we can work together to turn your vision into reality. I\u2019m eager to be a part of your journey and contribute my skills and expertise to create something remarkable. Don\u2019t hesitate to contact me and let\u2019s embark on this exciting adventure together!"
+    },
+    "forms": {
+      "contact": {
+        "name": "Name",
+        "pronoun": "Pronouns",
+        "mail": "Email",
+        "message": "Type your message here",
+        "errors": {
+          "name": "Name cannot be blank.",
+          "pronoun": "Pronouns cannot be blank.",
+          "mail": "Insert a valid email.",
+          "message": "Message cannot be blank."
+        }
+      },
+      "actions": {
+        "send": "Send",
+        "reset": "Reset"
+      }
     }
 }

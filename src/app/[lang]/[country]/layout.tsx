@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Thiago Portfolio',
-  description: 'Thiago`s portfolio build with next',
+  title: 'Íris Portfolio',
+  description: 'Íris`s portfolio build with next',
 }
 export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }))

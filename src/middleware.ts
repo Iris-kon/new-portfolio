@@ -46,7 +46,7 @@ export function middleware(request: NextRequest) {
     return !pathname.startsWith(`/${localeParts.lang}/${localeParts.country}`)
   })
 
-  if (pathnameIsMissingValidLocale) {
+  if (pathnameIsMissingValidLocale && !pathname.includes('/imgs')) {
     // rewrite it so next.js will render `/` as if it was `/en/us`
 
     const matchedLocale = findBestMatchingLocale(

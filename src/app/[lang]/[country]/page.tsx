@@ -1,4 +1,8 @@
+import { Contact } from '@/app/components/Contact'
+import { Habilities } from '@/app/components/Habilities'
 import { Header } from '@/app/components/Header'
+import { Hero } from '@/app/components/Hero'
+import { Work } from '@/app/components/Work'
 import { ValidLocale, getTranslator } from '@/i18n'
 
 export default async function Home({
@@ -6,31 +10,31 @@ export default async function Home({
 }: {
   params: { lang: string; country: string }
 }) {
-  const translate = await getTranslator(
-    `${params.lang}-${params.country.toUpperCase()}` as ValidLocale
-  )
+  const language = `${
+    params.lang
+  }-${params.country.toUpperCase()}` as ValidLocale
+
+  const translate = await getTranslator(language)
 
   const nav = [
     {
       text: translate('nav.about'),
-      to: '/',
+      to: '#about',
     },
     {
       text: translate('nav.work'),
-      to: '/',
+      to: '#work',
     },
-    { text: translate('nav.contact'), to: '/' },
+    { text: translate('nav.contact'), to: '#contact' },
   ]
 
   return (
     <div className="bg-slate-100 w-full h-full">
       <Header nav={nav} />
-      <h1>{translate('welcome.helloWorld')}</h1>
-      <h2 className="text-2xl text-blue-300">
-        {translate('welcome.happyYear', {
-          year: new Date().getFullYear(),
-        })}
-      </h2>
+      <Hero lang={language} />
+      <Habilities lang={language} />
+      <Work lang={language} />
+      <Contact lang={language} />
     </div>
   )
 }
