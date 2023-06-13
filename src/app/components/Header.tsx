@@ -14,7 +14,7 @@ export function Header({ nav }: HeaderProps) {
       <Link href="/" className="text-3xl border-0">
         Íris
       </Link>
-      <nav className="flex gap-4">
+      <nav className="gap-4 hidden lg:flex">
         {nav.map((n) => (
           <Link
             key={n.text}

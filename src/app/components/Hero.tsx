@@ -1,4 +1,5 @@
 import { ValidLocale, getTranslator } from '@/i18n'
+import { GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -12,9 +13,21 @@ export async function Hero({ lang }: HeroProps) {
   return (
     <section id="about" className="w-full h-screen flex flex-col md:flex-row">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center  items-center h-full lg:justify-center lg:items-start">
-        <h1 className="text-2xl font-bold text-center lg:text-left">
-          {translate('hero.line')}
-        </h1>
+        <div className="flex gap-2 items-center justify-center">
+          <h1 className="text-2xl font-bold text-center lg:text-left">
+            {translate('hero.line')}
+          </h1>
+          <p className="text-3xl">|</p>
+          <Link href="/">
+            <GithubIcon />
+          </Link>
+          <Link href="/">
+            <LinkedinIcon />
+          </Link>
+          <Link href="/">
+            <MailIcon />
+          </Link>
+        </div>
         <h2 className="text-4xl sm:text-7xl font-bold text-center lg:text-left">
           {translate('hero.title')}
         </h2>

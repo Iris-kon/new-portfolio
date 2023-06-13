@@ -33,9 +33,5 @@ export async function Work({ lang }: WorkProps) {
   const translate = await getTranslator(lang)
   const works = await getWorks(lang.includes('en') ? 'en' : lang)
 
-  return (
-    <section id="work" className="px-4 py-8 bg-slate-100">
-      {JSON.stringify(works)}
-    </section>
-  )
+  return <section id="work" className="px-4 py-8 bg-slate-100"></section>
 }
