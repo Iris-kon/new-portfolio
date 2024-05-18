@@ -1,44 +1,44 @@
 {
-    "nav": {
-      "about": "Sobre",
-      "contact": "Contato",
-      "work": "Trabalho"
-    },
-     "hero": {
-      "line": "Íris Oliveira",
-      "title": "Desenvolvedora Full Stack",
-      "subtitle": "Transformando ideas em realidade com habilidades em ReactJs, React Native e Node.js!",
-      "allWorks": "Veja meus trabalhos!"
-    },
-    "habilities": {
-      "front": "Por meio das minhas habilidades em React e NextJS, sou capaz de criar interfaces incríveis com foco em uma experiência de usuário de qualidade. Com minha vasta experiência no desenvolvimento de aplicativos móveis utilizando React Native, tenho a capacidade de criar experiências envolventes e nativas em dispositivos móveis. A combinação dessas tecnologias me permite oferecer soluções visualmente atraentes, funcionais e consistentes em diversas plataformas, proporcionando uma experiência excepcional aos usuários.",
-      "server": "Tenho um domínio sólido no desenvolvimento de APIs REST utilizando Node.js e sou especialista em aproveitar todo o potencial dos frameworks NestJS e Loopback 4. Essas ferramentas me permitem construir serviços robustos e altamente escaláveis, atendendo às necessidades dos projetos de forma eficiente.",
-      "game": "Tenho experiência e conhecimento para construir jogos envolventes e interativos, aproveitando todas as funcionalidades e recursos que a plataforma Unity oferece. Estou familiarizada com os conceitos de programação e design de jogos, permitindo-me criar experiências divertidas e imersivas para os jogadores. Estou constantemente atualizando minhas habilidades e acompanhando as últimas tendências e avanços na indústria de jogos para entregar produtos de alta qualidade."
-    },
-    "work": {
-      "best": "Melhores trabalhos",
-      "all": "Todos os trabalhos"
-    },
+  "nav": {
+    "about": "Sobre",
+    "contact": "Contato",
+    "work": "Trabalho"
+  },
+  "hero": {
+    "line": "Íris Oliveira",
+    "title": "Desenvolvedora Full Stack",
+    "subtitle": "Transformando ideas em realidade com habilidades em ReactJs, React Native e Node.js!",
+    "allWorks": "Veja meus trabalhos!"
+  },
+  "habilities": {
+    "front": "Por meio das minhas habilidades em React e NextJS, sou capaz de criar interfaces incríveis com foco em uma experiência de usuário de qualidade. Com minha vasta experiência no desenvolvimento de aplicativos móveis utilizando React Native, tenho a capacidade de criar experiências envolventes e nativas em dispositivos móveis. A combinação dessas tecnologias me permite oferecer soluções visualmente atraentes, funcionais e consistentes em diversas plataformas, proporcionando uma experiência excepcional aos usuários.",
+    "server": "Tenho um domínio sólido no desenvolvimento de APIs REST utilizando Node.js e sou especialista em aproveitar todo o potencial dos frameworks NestJS e Loopback 4. Essas ferramentas me permitem construir serviços robustos e altamente escaláveis, atendendo às necessidades dos projetos de forma eficiente.",
+    "game": "Tenho experiência e conhecimento para construir jogos envolventes e interativos, aproveitando todas as funcionalidades e recursos que a plataforma Unity oferece. Estou familiarizada com os conceitos de programação e design de jogos, permitindo-me criar experiências divertidas e imersivas para os jogadores. Estou constantemente atualizando minhas habilidades e acompanhando as últimas tendências e avanços na indústria de jogos para entregar produtos de alta qualidade."
+  },
+  "work": {
+    "best": "Melhores trabalhos",
+    "all": "Todos os trabalhos"
+  },
+  "contact": {
+    "title": "Vamos colaborar",
+    "paragraph": "Está pronta(o) para colaborar em projetos empolgantes? Vamos nos conectar e transformar suas ideias em realidade! Sinta-se à vontade para entrar em contato comigo hoje mesmo e vamos discutir como podemos trabalhar juntos para concretizar sua visão. Estou ansiosa para fazer parte da sua jornada e contribuir com minhas habilidades e expertise para criar algo extraordinário. Não hesite em me contatar e embarcar nessa aventura emocionante juntos!"
+  },
+  "forms": {
     "contact": {
-      "title": "Vamos colaborar",
-      "paragraph": "Está pronta(o) para colaborar em projetos empolgantes? Vamos nos conectar e transformar suas ideias em realidade! Sinta-se à vontade para entrar em contato comigo hoje mesmo e vamos discutir como podemos trabalhar juntos para concretizar sua visão. Estou ansiosa para fazer parte da sua jornada e contribuir com minhas habilidades e expertise para criar algo extraordinário. Não hesite em me contatar e embarcar nessa aventura emocionante juntos!"
-    },
-    "forms": {
-      "contact": {
-        "name": "Nome",
-        "pronoun": "Pronomes",
-        "mail": "Email",
-        "message": "Deixe sua mensagem aqui",
-        "errors": {
-          "name": "Nome não pode ser vazio.",
-          "pronoun": "Pronomes não pode ser vazio.",
-          "mail": "Insira um email válido.",
-          "message": "Mensagem não pode ser vazia."
-        }
-      },
-      "actions": {
-        "send": "Enviar",
-        "reset": "Limpar"
+      "name": "Nome",
+      "pronoun": "Pronomes",
+      "mail": "Email",
+      "message": "Deixe sua mensagem aqui",
+      "errors": {
+        "name": "Nome não pode ser vazio.",
+        "pronoun": "Pronomes não pode ser vazio.",
+        "mail": "Insira um email válido.",
+        "message": "Mensagem não pode ser vazia."
       }
+    },
+    "actions": {
+      "send": "Enviar",
+      "reset": "Limpar"
     }
+  }
 }

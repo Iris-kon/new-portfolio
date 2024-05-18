@@ -42,7 +42,7 @@ export async function Hero({ lang }: HeroProps) {
           {translate('hero.allWorks')}
         </Link>
       </div>
-      <div className="w-full lg:w-2/4 h-5/6 relative">
+      <div className="w-full lg:w-2/4 h-full relative">
         <Image
           src="/imgs/avatar.png"
           sizes="(max-width: 768px) 100vw"
