@@ -12,22 +12,23 @@ export async function Hero({ lang }: HeroProps) {
 
   return (
     <section id="about" className="w-full h-screen flex flex-col md:flex-row">
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center  items-center h-full lg:justify-center lg:items-start">
+      <div className="max-w-[1000px] mr-auto px-8 pt-8 lg:pt-0 flex flex-col justify-center  h-full items-center  lg:items-start">
         <div className="flex gap-2 items-center justify-center">
           <h1 className="text-2xl font-bold text-center lg:text-left">
             {translate('hero.line')}
           </h1>
           <p className="text-3xl">|</p>
-          <Link href="/">
+          <a href="https://github.com/Iris-kon" className='hover:text-orange-500 transition-colors'>
             <GithubIcon />
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="https://www.linkedin.com/in/iris-oliveira-k-on/" className='hover:text-blue-900 transition-colors'>
             <LinkedinIcon />
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="mailto://irisoliveira.k.on@gmail.com" className='hover:text-green-500 transition-colors'>
             <MailIcon />
-          </Link>
+          </a>
         </div>
+        
         <h2 className="text-4xl sm:text-7xl font-bold text-center lg:text-left">
           {translate('hero.title')}
         </h2>
@@ -37,7 +38,7 @@ export async function Hero({ lang }: HeroProps) {
         <Link
           href="#work"
           scroll={false}
-          className="cursor-pointer w-48 font-semibold flex items-center justify-center py-3 rounded-md text-gray-100 bg-green-500 duration-300 hover:bg-green-700"
+          className="cursor-pointer w-48 font-semibold flex items-center justify-center py-3 rounded-md text-gray-100 bg-orange-400 duration-300 hover:bg-orange-600"
         >
           {translate('hero.allWorks')}
         </Link>

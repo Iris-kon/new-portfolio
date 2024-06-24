@@ -13,11 +13,12 @@
   "habilities": {
     "front": "With my skills in React and NextJS, I am able to create amazing interfaces with a focus on high-quality user experiences. With my extensive experience in developing mobile applications using React Native, I have the ability to create engaging and native experiences on mobile devices. The combination of these technologies enables me to deliver visually appealing, functional, and consistent solutions across multiple platforms, providing an exceptional user experience.",
     "server": "I possess a strong expertise in developing REST APIs using Node.js and excel in leveraging the full capabilities of frameworks such as NestJS and Loopback 4. These powerful tools empower me to construct resilient and highly scalable services that efficiently cater to project requirements. With my proficiency in these technologies, I am well-equipped to deliver robust solutions that meet the demands of any project effectively.",
-    "game": "With my experience and knowledge to build engaging and interactive games, making full use of all the features and capabilities that the Unity platform offers. I am familiar with game programming and design concepts, enabling me to create fun and immersive experiences for players. I am constantly updating my skills and keeping up with the latest trends and advancements in the gaming industry to deliver high-quality products."
+    "game": "With my experience and knowledge to build engaging and interactive games, making full use of all the features and capabilities that the Unreal engine offers. I am familiar with game programming and design concepts, enabling me to create fun and immersive experiences for players. I am constantly updating my skills and keeping up with the latest trends and advancements in the gaming industry to deliver high-quality products."
   },
   "work": {
     "best": "Best works",
-    "all": "All works"
+    "all": "All works",
+    "seeMore": "See more"
   },
   "contact": {
     "title": "Lets work together",

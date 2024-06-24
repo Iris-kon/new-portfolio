@@ -20,6 +20,9 @@ const dictionaries: Record<ValidLocale, any> = {
     import('./dictionaries/pt-BR.json').then((module) => module.default),
 } as const
 
+export const getDictionary = async (locale: ValidLocale) =>
+  dictionaries[locale]?.() ?? dictionaries['en-US']();
+
 export const getTranslator = async (locale: ValidLocale) => {
   const dictionary = await dictionaries[locale]()
   return (key: string, params?: { [key: string]: string | number }) => {

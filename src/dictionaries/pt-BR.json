@@ -13,11 +13,12 @@
   "habilities": {
     "front": "Por meio das minhas habilidades em React e NextJS, sou capaz de criar interfaces incríveis com foco em uma experiência de usuário de qualidade. Com minha vasta experiência no desenvolvimento de aplicativos móveis utilizando React Native, tenho a capacidade de criar experiências envolventes e nativas em dispositivos móveis. A combinação dessas tecnologias me permite oferecer soluções visualmente atraentes, funcionais e consistentes em diversas plataformas, proporcionando uma experiência excepcional aos usuários.",
     "server": "Tenho um domínio sólido no desenvolvimento de APIs REST utilizando Node.js e sou especialista em aproveitar todo o potencial dos frameworks NestJS e Loopback 4. Essas ferramentas me permitem construir serviços robustos e altamente escaláveis, atendendo às necessidades dos projetos de forma eficiente.",
-    "game": "Tenho experiência e conhecimento para construir jogos envolventes e interativos, aproveitando todas as funcionalidades e recursos que a plataforma Unity oferece. Estou familiarizada com os conceitos de programação e design de jogos, permitindo-me criar experiências divertidas e imersivas para os jogadores. Estou constantemente atualizando minhas habilidades e acompanhando as últimas tendências e avanços na indústria de jogos para entregar produtos de alta qualidade."
+    "game": "Tenho experiência e conhecimento para construir jogos envolventes e interativos, aproveitando todas as funcionalidades e recursos que a Unreal engine oferece. Estou familiarizada com os conceitos de programação e design de jogos, permitindo-me criar experiências divertidas e imersivas para os jogadores. Estou constantemente atualizando minhas habilidades e acompanhando as últimas tendências e avanços na indústria de jogos para entregar produtos de alta qualidade."
   },
   "work": {
     "best": "Melhores trabalhos",
-    "all": "Todos os trabalhos"
+    "all": "Todos os trabalhos",
+    "seeMore": "Veja mais"
   },
   "contact": {
     "title": "Vamos colaborar",
