@@ -138,6 +138,18 @@ interface WorksDocumentData {
   git: prismic.LinkToMediaField;
 
   /**
+   * Lang field in *works*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: Selecione o idioma
+   * - **Default Value**: pt-BR
+   * - **API ID Path**: works.lang
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  lang: prismic.SelectField<"pt-BR" | "en-US", "filled">;
+
+  /**
    * Slice Zone field in *works*
    *
    * - **Field Type**: Slice Zone

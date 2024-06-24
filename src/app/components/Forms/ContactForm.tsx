@@ -7,7 +7,7 @@ import * as yup from 'yup'
 
 interface ContactFormProps {
   name: string
-  pronoun: string
+  pronoun?: string
   mail: string
   message: string
   errorsT: {
@@ -20,7 +20,7 @@ interface ContactFormProps {
 
 interface ContactFormData {
   name: string
-  pronoun: string
+  pronoun?: string
   email: string
   message: string
 }
