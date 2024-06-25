@@ -25,7 +25,7 @@ export function WorksCard ({ imageUrl, title, description, lang, action }: CardP
     <>
       <div className="max-w-sm rounded-md overflow-hidden shadow-lg bg-white">
         <div className="w-full h-56 relative">
-          <Image src={imageUrl} alt={title} fill objectFit="cover" />
+          <Image src={imageUrl} alt={title} fill style={{objectFit: "cover"}} />
         </div>
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{title}</div>
