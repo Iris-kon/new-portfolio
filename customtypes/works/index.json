@@ -28,14 +28,6 @@
           "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
-      "git": {
-        "type": "Link",
-        "config": {
-          "label": "Git",
-          "placeholder": "",
-          "select": "media"
-        }
-      },
       "lang": {
         "type": "Select",
         "config": {
@@ -43,6 +35,14 @@
           "placeholder": "Selecione o idioma",
           "options": ["pt-BR", "en-US"],
           "default_value": "pt-BR"
+        }
+      },
+      "git": {
+        "type": "Link",
+        "config": {
+          "label": "Git",
+          "placeholder": "",
+          "select": null
         }
       },
       "slices": {

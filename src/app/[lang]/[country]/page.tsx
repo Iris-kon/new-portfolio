@@ -4,7 +4,12 @@ import { Header } from '@/app/components/Header'
 import { Hero } from '@/app/components/Hero'
 import { Work } from '@/app/components/Work'
 import { ValidLocale, getTranslator } from '@/i18n'
-import Head from 'next/head'
+
+
+
+interface HomeProps {
+  params: { lang: string; country: string }
+}
 
 export const metadata = {
   description: 'Profissional experiente e versátil com habilidades em desenvolvimento de interfaces, back-end e jogos. Possui domínio de diversas tecnologias e frameworks, com foco na criação de soluções eficientes, escaláveis e com foco na experiência do usuário. Atua de forma proativa e busca constante atualização de seus conhecimentos para entregar produtos de alta qualidade.',
@@ -52,9 +57,7 @@ export const metadata = {
 
 export default async function Home({
   params,
-}: {
-  params: { lang: string; country: string }
-}) {
+}: HomeProps) {
   const language = `${params.lang
     }-${params.country.toUpperCase()}` as ValidLocale
 
@@ -77,7 +80,7 @@ export default async function Home({
       <Header nav={nav} />
       <Hero lang={language} />
       <Habilities lang={language} />
-      <Work lang={language} />
+      <Work lang={language}  />
       <Contact lang={language} />
     </div>
   )
