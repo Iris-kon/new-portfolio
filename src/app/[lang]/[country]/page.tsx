@@ -72,7 +72,10 @@ export default async function Home({
       text: translate('nav.work'),
       to: '#work',
     },
-    { text: translate('nav.contact'), to: '#contact' },
+    { 
+      text: translate('nav.contact'), 
+      to: '#contact'
+    },
   ]
 
   return (

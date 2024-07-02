@@ -2,6 +2,7 @@ import { ValidLocale, getTranslator } from '@/i18n'
 import { WorksCard } from './worksCard'
 import { createClient } from '@/prismicio'
 import { RichTextField, asText } from '@prismicio/client'
+import { Anchor } from './Anchor'
 
 interface IWorks {
   uid: string
@@ -44,6 +45,7 @@ export async function Work({ lang }: WorkProps) {
 
   return (
     <section id="work" className="px-4 py-8 bg-slate-100">
+      <Anchor />
       <h2 className='text-3xl'>{translate('work.best')}</h2>
 
       <div className="grid pt-4 grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-gray-100">

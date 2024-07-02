@@ -1,6 +1,7 @@
 import { locales } from '@/i18n'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { BackToTop } from '@/app/components/BackToTop'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function Root({
   return (
     <html lang={params.lang}>
       <body className={inter.className}>{children}</body>
+      <BackToTop />
     </html>
   )
 }

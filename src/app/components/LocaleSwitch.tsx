@@ -17,7 +17,7 @@ export default function LocaleSwitcher() {
 
   return (
     <div className="group relative h-full  z-10">
-      <div className="flex px-2 justify-center items-center rounded-full border-gray-200 border-2">
+      <div className="flex px-2 justify-center items-center rounded-full border-gray-200 border-2 group-hover:border-green-300">
         <LanguagesIcon />
         <ChevronDownIcon />
       </div>

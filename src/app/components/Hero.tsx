@@ -11,20 +11,20 @@ export async function Hero({ lang }: HeroProps) {
   const translate = await getTranslator(lang)
 
   return (
-    <section id="about" className="w-full h-screen flex flex-col md:flex-row">
+    <section className="w-full h-screen flex flex-col md:flex-row">
       <div className="max-w-[1000px] mr-auto px-8 pt-8 lg:pt-0 flex flex-col justify-center  h-full items-center  lg:items-start">
         <div className="flex gap-2 items-center justify-center">
           <h1 className="text-2xl font-bold text-center lg:text-left">
             {translate('hero.line')}
           </h1>
           <p className="text-3xl">|</p>
-          <a href="https://github.com/Iris-kon" className='hover:text-orange-500 transition-colors'>
+          <a href="https://github.com/Iris-kon" className='hover:text-orange-500 transition-colors p-1'>
             <GithubIcon />
           </a>
-          <a href="https://www.linkedin.com/in/iris-oliveira-k-on/" className='hover:text-blue-900 transition-colors'>
+          <a href="https://www.linkedin.com/in/iris-oliveira-k-on/" className='hover:text-blue-900 transition-colors p-1'>
             <LinkedinIcon />
           </a>
-          <a href="mailto://irisoliveira.k.on@gmail.com" className='hover:text-green-500 transition-colors'>
+          <a href="mailto://irisoliveira.k.on@gmail.com" className='hover:text-green-500 transition-colors p-1'>
             <MailIcon />
           </a>
         </div>

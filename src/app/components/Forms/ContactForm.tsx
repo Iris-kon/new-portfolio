@@ -111,7 +111,7 @@ export function ContactForm({
 
       <div className="flex gap-4">
         <button
-          className="w-full flex rounded-md gap-2 py-2 font-bold items-center justify-center bg-green-500 text-slate-100 duration-300 hover:bg-green-700"
+          className="w-full flex rounded-md gap-2 py-2 font-bold items-center justify-center bg-orange-400 text-slate-100 duration-300 hover:bg-orange-600"
           type="submit"
         >
           <SendIcon />
