@@ -33,7 +33,11 @@ export function BackToTop() {
 
   return (
     <button
-      className={`fixed bottom-0 right-0 bg-green-950 text-green-300 bg-opacity-75 rounded  mr-4 mb-11 z-50 items-center text-xs flex gap-2 ${isVisible ? 'visible' : ''}`}
+      className={`
+        fixed bottom-0 right-0 bg-green-950 text-green-300 bg-opacity-75 rounded 
+        transition-opacity ease-in-out delay-150 duration-300 mr-4 mb-11 z-50 items-center 
+        text-xs flex gap-2 ${isVisible ? 'opacity-100 z-50' : 'opacity-0 -z-10'}`
+      }
       onClick={scrollToTop}
     >
       <ChevronUp size={40} />
