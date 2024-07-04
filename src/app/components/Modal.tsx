@@ -8,18 +8,21 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/keyboard"
+import { asText } from '@prismicio/client';
 
-interface ModalProps {
+interface IWorks {
+  title: string
+  slider: { alt: string, src: string }[]
+  description: string
+}
+
+interface ModalProps extends IWorks {
   isOpen: boolean
   onClose: () => void
   lang: ValidLocale
-  images: {
-    url: string
-    alt: string
-  }[]
 }
 
-export function Modal ({ isOpen, onClose, lang, images }: ModalProps) {
+export function Modal ({ isOpen, onClose, title, slider, description }: ModalProps) {
 
   if (!isOpen) return null
 
@@ -27,40 +30,38 @@ export function Modal ({ isOpen, onClose, lang, images }: ModalProps) {
     <div className="z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div className="bg-white relative rounded shadow-lg w-1/2">
         <div className='flex justify-between items-start'>
-          <h2 className="text-xl p-4 font-bold">Modal Title</h2>
+          <h2 className="text-xl p-4 font-bold">{title}</h2>
 
           <button onClick={onClose} className='hover:text-red-500 transition-colors p-1'>
             <XIcon />
           </button>
         </div>
         <div>
-          <div className='h-80 w-full'>
           <Swiper
+            className='h-96 w-full'
             modules={[Navigation, Pagination, Keyboard]}
             slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
             keyboard
             navigation={true}
             loop={true}
             pagination={{ clickable: true }}
           >
-            {images.map((i) => (
-              <SwiperSlide key={i.url}>
+            {slider.map((i) => (
+              <SwiperSlide key={i.src}>
                 <div
                   style={{
                     width: "100%",
-                    height: "90vh",
+                    height: "100%",
                     position: "relative",
                   }}
                 >
-                  <Image src={i.url} alt={i.alt} fill />
+                  <Image src={i.src} alt={i.alt} fill style={{objectFit: "cover"}} />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-          </div>
-          <p className="text-gray-700 p-4">Modal content goes here...</p>
+  
+          <p className="text-gray-700 text-justify p-4">{description}</p>
         </div>
         
       </div>

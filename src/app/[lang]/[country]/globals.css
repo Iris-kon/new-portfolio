@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --swiper-navigation-color: rgb(251 146 60);
+  --swiper-pagination-color: rgb(251 146 60);
+  --swiper-pagination-color: rgb(251 146 60);
+  
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -22,3 +29,4 @@ button {
   opacity: 0.6;
   cursor: not-allowed;
 }
+

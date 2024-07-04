@@ -22,8 +22,10 @@ export default function Root({
 }) {
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>{children}</body>
-      <BackToTop />
+      <body className={inter.className}>
+        {children}
+        <BackToTop />  
+      </body>
     </html>
   )
 }

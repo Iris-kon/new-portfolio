@@ -12,7 +12,7 @@ interface HeaderProps {
 }
 
 export function Header({ nav }: HeaderProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   return (
     <>

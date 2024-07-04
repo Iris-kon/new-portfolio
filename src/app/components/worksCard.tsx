@@ -9,12 +9,13 @@ import { type getDictionary } from "../../i18n";
 interface CardProps {
   imageUrl : string 
   title: string, 
+  slider: { alt: string, src: string }[]
   description: string,
   lang: ValidLocale 
   action: string
 }
 
-export function WorksCard ({ imageUrl, title, description, lang, action }: CardProps) {
+export function WorksCard ({ imageUrl, title, description, lang, action, slider }: CardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   function handleSeeMoreClick() {
@@ -38,7 +39,14 @@ export function WorksCard ({ imageUrl, title, description, lang, action }: CardP
         </div>
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={handleSeeMoreClick} lang={lang} images={[]} />
+      <Modal 
+        isOpen={isModalOpen} 
+        onClose={handleSeeMoreClick} 
+        lang={lang}
+        title={title} 
+        slider={slider} 
+        description={description}
+      />
     </>
   )
 }

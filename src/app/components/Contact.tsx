@@ -1,5 +1,3 @@
-'use client'
-
 import { ValidLocale, getTranslator } from '@/i18n'
 import { ContactForm } from './Forms/ContactForm'
 

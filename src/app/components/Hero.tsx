@@ -49,6 +49,7 @@ export async function Hero({ lang }: HeroProps) {
           sizes="(max-width: 768px) 100vw"
           fill
           alt="avatar"
+          priority={true}
         />
       </div>
     </section>

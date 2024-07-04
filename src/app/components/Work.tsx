@@ -1,16 +1,8 @@
 import { ValidLocale, getTranslator } from '@/i18n'
 import { WorksCard } from './worksCard'
 import { createClient } from '@/prismicio'
-import { RichTextField, asText } from '@prismicio/client'
+import { asText } from '@prismicio/client'
 import { Anchor } from './Anchor'
-
-interface IWorks {
-  uid: string
-  title: string
-  image: string
-  slider: { alt: string, src: string }
-  description: RichTextField
-}
 
 interface WorkProps {
   lang: ValidLocale
@@ -30,7 +22,7 @@ async function getData() {
       title: r.data.title,
       abstract: r.data.description,
       image: r.data.slices[0]?.primary.images[0]?.image.url,
-      slider: r.data.slices[0]?.primary.images.map(i => ({ src: i.image.url, alt: i.image.alt }))
+      slider: r.data.slices[0]?.primary.images.map(i => ({ src: i.image.url!, alt: i.image.alt! })) ?? []
     }
   })
 
@@ -56,6 +48,7 @@ export async function Work({ lang }: WorkProps) {
             action={translate('work.seeMore')}
             imageUrl={w.image!}
             title={w.title!}
+            slider={w.slider}
             description={asText(w.abstract)}
           />
         ))}
