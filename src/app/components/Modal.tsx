@@ -38,7 +38,7 @@ export function Modal ({ isOpen, onClose, title, slider, description }: ModalPro
         </div>
         <div>
           <Swiper
-            className='h-96 w-full'
+            className='h-[30vw] w-full'
             modules={[Navigation, Pagination, Keyboard]}
             slidesPerView={1}
             keyboard
