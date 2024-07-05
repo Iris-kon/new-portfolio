@@ -1,4 +1,4 @@
-export const defaultLocale = 'en-US'
+export const defaultLocale = 'pt-Br'
 export const locales = ['en-US', 'pt-BR'] as const
 export type ValidLocale = (typeof locales)[number]
 
@@ -14,14 +14,14 @@ type ISOLocale = {
 type LocaleSource = PathnameLocale | ISOLocale
 
 const dictionaries: Record<ValidLocale, any> = {
-  'en-US': () =>
-    import('./dictionaries/en-US.json').then((module) => module.default),
   'pt-BR': () =>
     import('./dictionaries/pt-BR.json').then((module) => module.default),
+  'en-US': () =>
+    import('./dictionaries/en-US.json').then((module) => module.default),
 } as const
 
 export const getDictionary = async (locale: ValidLocale) =>
-  dictionaries[locale]?.() ?? dictionaries['en-US']();
+  dictionaries[locale]?.() ?? dictionaries['pt-BR']();
 
 export const getTranslator = async (locale: ValidLocale) => {
   const dictionary = await dictionaries[locale]()

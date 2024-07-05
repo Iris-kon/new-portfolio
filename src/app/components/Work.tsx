@@ -36,7 +36,7 @@ export async function Work({ lang }: WorkProps) {
   const data = await getData()
 
   return (
-    <section id="work" className="px-4 py-8 bg-slate-100">
+    <section id="work" className="px-8 py-8 bg-slate-100">
       <Anchor />
       <h2 className='text-3xl'>{translate('work.best')}</h2>
 

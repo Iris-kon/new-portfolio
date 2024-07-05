@@ -24,7 +24,7 @@ export async function Contact({ lang }: ContactProps) {
   return (
     <section
       id="contact"
-      className="px-4 py-8 flex flex-col gap-8 justify-evenly md:flex-row bg-slate-200"
+      className="px-8 py-8 flex flex-col gap-8 justify-evenly md:flex-row bg-slate-200"
     >
       <div className="w-full lg:w-2/4 h-full flex flex-col gap-4 justify-evenly px-2">
         <h2 className="text-3xl">{translate('contact.title')}</h2>
