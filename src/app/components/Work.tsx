@@ -7,7 +7,7 @@ import { Anchor } from './Anchor'
 interface WorkProps {
   lang: ValidLocale
 }
-export const revalidate = 3600
+export const revalidate = 0
 
 async function getData() {
 
