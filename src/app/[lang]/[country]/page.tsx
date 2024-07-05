@@ -39,7 +39,7 @@ export const metadata = {
     "Institutional websites",
   ],
   openGraph: {
-    images: 'https://iris-portfolio.vercel.app/assets/imgs/Home.png',
+    images: 'https://iris-portfolio-theta.vercel.app/assets/imgs/Home.png',
     title: 'Íris Oliveira - Home',
     description: 'Profissional experiente e versátil com habilidades em desenvolvimento de interfaces, back-end e jogos. Possui domínio de diversas tecnologias e frameworks, com foco na criação de soluções eficientes, escaláveis e com foco na experiência do usuário. Atua de forma proativa e busca constante atualização de seus conhecimentos para entregar produtos de alta qualidade.',
     alt: 'Íris Oliveira - Home, image'
@@ -49,7 +49,7 @@ export const metadata = {
     title: 'Íris Oliveira - Home',
     description: 'Profissional experiente e versátil com habilidades em desenvolvimento de interfaces, back-end e jogos. Possui domínio de diversas tecnologias e frameworks, com foco na criação de soluções eficientes, escaláveis e com foco na experiência do usuário. Atua de forma proativa e busca constante atualização de seus conhecimentos para entregar produtos de alta qualidade.',
     images: {
-      url: 'https://iris-portfolio.vercel.app/assets/imgs/Home.png',
+      url: 'https://iris-portfolio-theta.vercel.app/assets/imgs/Home.png',
       alt: 'Íris Oliveira - Home, image',
     },
   }
