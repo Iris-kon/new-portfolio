@@ -28,7 +28,7 @@ export function WorksCard ({ imageUrl, title, description, lang, action, slider 
         <div className="w-full h-56 relative">
           <Image src={imageUrl} alt={title} fill style={{objectFit: "cover"}} />
         </div>
-        <div className="px-6 py-4 h-80">
+        <div className="px-6 py-4 h-96 md:h-80">
           <div className="font-bold text-xl mb-2 text-justify">{title}</div>
           <p className="text-gray-700 text-base text-justify">{description}</p>
         </div>

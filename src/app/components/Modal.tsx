@@ -28,7 +28,7 @@ export function Modal ({ isOpen, onClose, title, slider, description }: ModalPro
 
   return (
     <div className="z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
-      <div className="bg-white relative rounded shadow-lg w-1/2">
+      <div className="bg-white relative rounded shadow-lg w-[90%] md:w-1/2">
         <div className='flex justify-between items-start'>
           <h2 className="text-xl p-4 font-bold">{title}</h2>
 
@@ -38,7 +38,7 @@ export function Modal ({ isOpen, onClose, title, slider, description }: ModalPro
         </div>
         <div>
           <Swiper
-            className='h-[30vw] w-full'
+            className='h-[50vw] md:h-[30vw] w-full'
             modules={[Navigation, Pagination, Keyboard]}
             slidesPerView={1}
             keyboard
