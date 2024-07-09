@@ -37,6 +37,7 @@ export const metadata = {
     "System migration",
     "System update",
     "Institutional websites",
+    "Freelancer"
   ],
   openGraph: {
     images: 'https://iris-portfolio-theta.vercel.app/imgs/Home.png',
