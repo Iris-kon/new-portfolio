@@ -4,6 +4,8 @@ import { Header } from '@/app/components/Header'
 import { Hero } from '@/app/components/Hero'
 import { Work } from '@/app/components/Work'
 import { ValidLocale, getTranslator } from '@/i18n'
+import { createClient } from '@/prismicio'
+import { asLink, asText } from '@prismicio/client'
 
 
 
@@ -56,11 +58,40 @@ export const metadata = {
   }
 }
 
+export const revalidate = 0
+
+async function getData(lang: string) {
+
+  const client = createClient()
+
+  const data = await client.getByType("works", {
+    pageSize: 8,
+    lang
+  })
+
+  const worksRaw = data.results.map((r) => {
+    return {
+      uid: r.uid,
+      title: r.data.title as string,
+      description: asText(r.data.description),
+      image: r.data.slices[0]?.primary.images[0]?.image.url ?? '',
+      slider: r.data.slices[0]?.primary.images.map(i => ({ src: i.image.url!, alt: i.image.alt! })) ?? [],
+      site: asLink(r.data.site) as string,
+      git: asLink(r.data.git) as string
+    }
+  })
+
+  return {
+    worksRaw, totalPages: data.total_pages,
+  }
+}
+
 export default async function Home({
   params,
 }: HomeProps) {
   const language = `${params.lang
-    }-${params.country.toUpperCase()}` as ValidLocale
+  }-${params.country.toUpperCase()}` as ValidLocale
+  const data = await getData(language.toLowerCase())
 
   const translate = await getTranslator(language)
 
@@ -84,7 +115,7 @@ export default async function Home({
       <Header nav={nav} />
       <Hero lang={language} />
       <Habilities lang={language} />
-      <Work lang={language}  />
+      <Work lang={language} works={data.worksRaw}  />
       <Contact lang={language} />
     </div>
   )

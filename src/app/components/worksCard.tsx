@@ -13,9 +13,11 @@ interface CardProps {
   description: string,
   lang: ValidLocale 
   action: string
+  site?: string
+  git?: string
 }
 
-export function WorksCard ({ imageUrl, title, description, lang, action, slider }: CardProps) {
+export function WorksCard ({ imageUrl, title, description, lang, action,slider, site, git }: CardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   function handleSeeMoreClick() {
@@ -46,6 +48,8 @@ export function WorksCard ({ imageUrl, title, description, lang, action, slider 
         title={title} 
         slider={slider} 
         description={description}
+        site={site}
+        git={git}
       />
     </>
   )

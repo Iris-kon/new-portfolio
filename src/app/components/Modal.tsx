@@ -1,5 +1,5 @@
-import { ValidLocale, getTranslator } from '@/i18n';
-import { XIcon } from 'lucide-react';
+import { ValidLocale } from '@/i18n';
+import { Github, LinkIcon, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Keyboard } from "swiper/modules"
@@ -8,12 +8,13 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/keyboard"
-import { asText } from '@prismicio/client';
 
 interface IWorks {
   title: string
   slider: { alt: string, src: string }[]
   description: string
+  site?: string
+  git?: string
 }
 
 interface ModalProps extends IWorks {
@@ -22,7 +23,7 @@ interface ModalProps extends IWorks {
   lang: ValidLocale
 }
 
-export function Modal ({ isOpen, onClose, title, slider, description }: ModalProps) {
+export function Modal({ isOpen, onClose, title, slider, description, site, git }: ModalProps) {
 
   if (!isOpen) return null
 
@@ -36,7 +37,7 @@ export function Modal ({ isOpen, onClose, title, slider, description }: ModalPro
             <XIcon />
           </button>
         </div>
-        <div>
+        <div className='pb-4'>
           <Swiper
             className='h-[50vw] md:h-[30vw] w-full'
             modules={[Navigation, Pagination, Keyboard]}
@@ -55,15 +56,40 @@ export function Modal ({ isOpen, onClose, title, slider, description }: ModalPro
                     position: "relative",
                   }}
                 >
-                  <Image src={i.src} alt={i.alt} fill style={{objectFit: "cover"}} />
+                  <Image src={i.src} alt={i.alt} fill style={{ objectFit: "cover" }} />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-  
+
           <p className="text-gray-700 text-justify p-4">{description}</p>
+
+          {git && (
+            <a href={git}
+              target="_blank"
+              rel="noopener noreferrer"
+              className='flex items-center gap-2 cursor-pointer px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
+            >
+              <div className='bg-black rounded-full p-1'>
+                <Github size={20} />
+              </div>
+              {git}
+            </a>
+          )}
+          {site && (
+            <a href={site}
+              target="_blank"
+              rel="noopener noreferrer"
+              className='flex items-center gap-2 cursor-pointer px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
+            >
+              <div className='bg-black rounded-full p-1'>
+                <LinkIcon size={20} />
+              </div>
+              {site}
+            </a>
+          )}
         </div>
-        
+
       </div>
     </div>
   )

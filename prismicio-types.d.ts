@@ -127,18 +127,6 @@ interface WorksDocumentData {
   description: prismic.RichTextField;
 
   /**
-   * Lang field in *works*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: Selecione o idioma
-   * - **Default Value**: pt-BR
-   * - **API ID Path**: works.lang
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  lang: prismic.SelectField<"pt-BR" | "en-US", "filled">;
-
-  /**
    * Git field in *works*
    *
    * - **Field Type**: Link
@@ -148,6 +136,17 @@ interface WorksDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   git: prismic.LinkField;
+
+  /**
+   * site field in *works*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: works.site
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  site: prismic.LinkField;
 
   /**
    * Slice Zone field in *works*
