@@ -32,7 +32,7 @@ export function WorksCard ({ imageUrl, title, description, lang, action,slider, 
         </div>
         <div className="px-6 py-4 h-96 md:h-80">
           <div className="font-bold text-xl mb-2 text-justify">{title}</div>
-          <p className="text-gray-700 text-base text-justify">{description}</p>
+          <p className="text-gray-700 text-base text-justify">{description.length > 350 ? `${description.slice(0, 350)} ...` : description}</p>
         </div>
         <div className="px-6 py-4 flex items-center justify-center">
           <button onClick={handleSeeMoreClick} className="bg-orange-400 hover:bg-orange-600 w-full text-white font-bold py-2 px-4 rounded focus:outline-none">
