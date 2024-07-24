@@ -65,7 +65,7 @@ async function getData(lang: string) {
   const client = createClient()
 
   const data = await client.getByType("works", {
-    pageSize: 8,
+    pageSize: 12,
     lang
   })
 
