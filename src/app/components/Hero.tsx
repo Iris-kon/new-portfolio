@@ -37,7 +37,7 @@ export async function Hero({ lang }: HeroProps) {
         </p>
         <Link
           href="#work"
-          className="cursor-pointer w-48 font-semibold flex items-center justify-center py-3 rounded-md text-gray-100 bg-orange-400 duration-300 hover:bg-orange-600"
+          className="cursor-pointer w-48 font-semibold flex shadow-md items-center justify-center py-3 rounded-md text-gray-100 bg-orange-400 duration-300 hover:bg-orange-600"
         >
           {translate('hero.allWorks')}
         </Link>

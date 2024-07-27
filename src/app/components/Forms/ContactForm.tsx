@@ -1,7 +1,7 @@
 'use client'
 
 import { yupResolver } from '@hookform/resolvers/yup'
-import { EraserIcon, SendIcon } from 'lucide-react'
+import { EraserIcon, MailIcon, SendIcon } from 'lucide-react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup'
 
@@ -114,7 +114,7 @@ export function ContactForm({
           className="w-full flex rounded-md gap-2 py-2 font-bold items-center justify-center bg-orange-400 text-slate-100 duration-300 hover:bg-orange-600"
           type="submit"
         >
-          <SendIcon />
+          <MailIcon />
           Submit
         </button>
         <button

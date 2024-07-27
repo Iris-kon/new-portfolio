@@ -1,9 +1,10 @@
 import { locales } from '@/i18n'
-import { Inter } from 'next/font/google'
+import { Montserrat, Rajdhani } from 'next/font/google'
 import './globals.css'
 import { BackToTop } from '@/app/components/BackToTop'
 
-const inter = Inter({ subsets: ['latin'] })
+const montSerrat = Montserrat({ subsets: ['latin'], weight: "700", variable: '--font-montserrat' })
+const rajdhani = Montserrat({ subsets: ['latin'], weight: ["400" , "600"], variable: '--font-rajdhani' })
 
 export const metadata = {
   title: 'Íris Portfolio',
@@ -22,7 +23,7 @@ export default function Root({
 }) {
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>
+      <body className={`${montSerrat.variable} ${rajdhani.variable}`}>
         {children}
         <BackToTop />  
       </body>
