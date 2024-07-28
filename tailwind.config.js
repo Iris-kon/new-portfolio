@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         "montserrat": "var(--font-montserrat)", // note: you can call the left side of this whatever you want - barlow-bold or title-font or foo-bar, this is what you'll use in your Tailwind css classes to use this font
-        "rajdhani": "var(--font-rajdhani)", 
+        "lato": "var(--font-lato)", 
       },
     },
   },

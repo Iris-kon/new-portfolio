@@ -1,5 +1,6 @@
 import { ValidLocale, getTranslator } from '@/i18n'
-import { GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react'
+import { RiGithubFill, RiLinkedinBoxFill } from '@remixicon/react'
+import { MailIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -18,14 +19,38 @@ export async function Hero({ lang }: HeroProps) {
             {translate('hero.line')}
           </h1>
           <p className="text-3xl">|</p>
-          <a href="https://github.com/Iris-kon" className='hover:text-orange-500 transition-colors p-1'>
-            <GithubIcon />
+          <a 
+            href="https://github.com/Iris-kon" 
+            className='group flex items-center justify-center hover:text-orange-500 transition-colors p-1'
+          >
+            <RiGithubFill size={30} />
+            <span 
+              className='w-0 invisible pl-1 text-orange-500 transition duration-300 ease-in-out group-hover:visible group-hover:w-12' 
+            >
+              Github
+            </span>
           </a>
-          <a href="https://www.linkedin.com/in/iris-oliveira-k-on/" className='hover:text-blue-900 transition-colors p-1'>
-            <LinkedinIcon />
+          <a 
+            href="https://www.linkedin.com/in/iris-oliveira-k-on/" 
+            className='group flex items-center justify-center hover:text-blue-900 transition-colors p-1'
+          >
+            <RiLinkedinBoxFill size={30} />
+            <span 
+              className='w-0 invisible pl-1 text-blue-900 transition duration-300 ease-in-out group-hover:visible group-hover:w-16' 
+            >
+              Linkedin
+            </span>
           </a>
-          <a href="mailto://irisoliveira.k.on@gmail.com" className='hover:text-green-500 transition-colors p-1'>
-            <MailIcon />
+          <a 
+            href="mailto://irisoliveira.k.on@gmail.com" 
+            className='group flex items-center justify-center hover:text-green-500 transition-colors p-1'
+          >
+            <MailIcon size={30} />
+            <span 
+              className='w-0 invisible pl-1 text-green-500 transition duration-300 ease-in-out group-hover:visible group-hover:w-14' 
+            >
+              E-mail
+            </span>
           </a>
         </div>
         
@@ -36,10 +61,13 @@ export async function Hero({ lang }: HeroProps) {
           {translate('hero.subtitle')}
         </p>
         <Link
-          href="#work"
-          className="cursor-pointer w-48 font-semibold flex shadow-md items-center justify-center py-3 rounded-md text-gray-100 bg-orange-400 duration-300 hover:bg-orange-600"
+          href="#contact"
+          className="
+            cursor-pointer transition ease-in-out w-48 font-semibold flex shadow-md 
+            items-center justify-center py-3 rounded-md text-gray-100 
+            bg-orange-400 duration-300 hover:bg-orange-600 hover:scale-110"
         >
-          {translate('hero.allWorks')}
+          {translate('hero.cta')}
         </Link>
       </div>
       <div className="w-full lg:w-2/4 h-full relative">

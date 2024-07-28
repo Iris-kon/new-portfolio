@@ -2,13 +2,13 @@
   "nav": {
     "about": "About",
     "contact": "Contact",
-    "work": "Work"
+    "work": "Works"
   },
   "hero": {
     "line": "Íris Oliveira",
     "title": "Full Stack Developer",
-    "subtitle": "Developer ready for new challenges - Transforming ideas into reality with ReactJs, React Native, and Node.js!",
-    "allWorks": "See my works!"
+    "subtitle": "With 3+ years of experience in ReactJS, NextJS, and React Native, I create impactful interfaces and robust APIs with Node.js and NestJS. Passionate about innovation and ready for new technological challenges.",
+    "cta": "Get in touch!"
   },
   "habilities": {
     "front": "With my skills in React and NextJS, I am able to create amazing interfaces with a focus on high-quality user experiences. With my extensive experience in developing mobile applications using React Native, I have the ability to create engaging and native experiences on mobile devices. The combination of these technologies enables me to deliver visually appealing, functional, and consistent solutions across multiple platforms, providing an exceptional user experience.",
@@ -22,7 +22,8 @@
   },
   "contact": {
     "title": "Lets work together",
-    "paragraph": "Are you ready to collaborate on exciting projects? Let\u2019s connect and bring your ideas to life! Feel free to reach out to me today and let\u2019s discuss how we can work together to turn your vision into reality. I\u2019m eager to be a part of your journey and contribute my skills and expertise to create something remarkable. Don\u2019t hesitate to contact me and let\u2019s embark on this exciting adventure together!"
+    "paragraph": "Are you ready to collaborate on exciting projects? Let\u2019s connect and bring your ideas to life! Feel free to reach out to me today and let\u2019s discuss how we can work together to turn your vision into reality. I\u2019m eager to be a part of your journey and contribute my skills and expertise to create something remarkable. Don\u2019t hesitate to contact me and let\u2019s embark on this exciting adventure together!",
+    "whatsappCta": "For quicker and more direct support, reach out via WhatsApp. I'm here to help and respond to your questions promptly!"
   },
   "forms": {
     "contact": {
@@ -39,7 +40,7 @@
     },
     "actions": {
       "send": "Send",
-      "reset": "Reset"
+      "clear": "Clear all fields"
     }
   }
 }

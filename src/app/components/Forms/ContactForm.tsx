@@ -1,11 +1,16 @@
 'use client'
 
 import { yupResolver } from '@hookform/resolvers/yup'
-import { EraserIcon, MailIcon, SendIcon } from 'lucide-react'
+import { EraserIcon, Loader2Icon, LoaderIcon, MailIcon } from 'lucide-react'
+import { NextApiResponse } from 'next'
+import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 import * as yup from 'yup'
 
 interface ContactFormProps {
+  clearText: string
+  sendText: string
   name: string
   pronoun?: string
   mail: string
@@ -27,11 +32,15 @@ interface ContactFormData {
 
 export function ContactForm({
   name,
+  clearText,
+  sendText,
   pronoun,
   mail,
   message,
   errorsT,
 }: ContactFormProps) {
+  const [isLoading, setIsLoading] = useState(false)
+
   const schema = yup
     .object({
       name: yup.string().required(errorsT.name),
@@ -51,7 +60,41 @@ export function ContactForm({
 
   const handleContactSubmit: SubmitHandler<ContactFormData> = async (
     values
-  ) => {}
+  ) => {
+    console.log(values)
+    setIsLoading(true)
+    fetch('/api/email', {
+      method: 'POST',
+      body: JSON.stringify({...values})
+    })
+      .then((response) => {
+        console.log(response)
+        toast.success('Email enviado com sucesso', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        })
+      })
+      .catch(err => {
+        console.log(err)
+        toast.error('Erro ao enviar email', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        })
+      })
+      .finally(() => setIsLoading(false))
+  }
 
   return (
     <form
@@ -61,7 +104,7 @@ export function ContactForm({
       <div className="w-full">
         <input
           placeholder={name}
-          className="w-full h-12 rounded-md px-2 text-lg"
+          className="w-full h-12 shadow-md rounded-md px-2 text-lg"
           {...register('name')}
         />
         {errors.name?.message ? (
@@ -72,7 +115,7 @@ export function ContactForm({
       <div className="w-full">
         <input
           placeholder={pronoun}
-          className="w-full h-12 rounded-md px-2 text-lg"
+          className="w-full h-12 shadow-md rounded-md px-2 text-lg"
           {...register('pronoun')}
         />
         {errors.pronoun?.message ? (
@@ -85,7 +128,7 @@ export function ContactForm({
       <div className="w-full">
         <input
           placeholder={mail}
-          className="w-full h-12 rounded-md px-2 text-lg"
+          className="w-full h-12 shadow-md rounded-md px-2 text-lg"
           type="email"
           {...register('email')}
         />
@@ -97,7 +140,7 @@ export function ContactForm({
       <div className="w-full">
         <textarea
           placeholder={message}
-          className="w-full rounded-md px-2 pt-2 text-lg"
+          className="w-full rounded-md shadow-md px-2 pt-2 text-lg"
           rows={5}
           cols={4}
           {...register('message')}
@@ -111,18 +154,19 @@ export function ContactForm({
 
       <div className="flex gap-4">
         <button
-          className="w-full flex rounded-md gap-2 py-2 font-bold items-center justify-center bg-orange-400 text-slate-100 duration-300 hover:bg-orange-600"
+          className="w-full flex rounded-md gap-2 py-2 font-bold shadow-md items-center justify-center bg-orange-400 text-slate-100 duration-300 hover:bg-orange-600"
           type="submit"
+          disabled={isLoading}
         >
-          <MailIcon />
-          Submit
+          {isLoading ? <Loader2Icon className='animate-spin' /> : <MailIcon /> }
+          {sendText}
         </button>
         <button
-          className="w-full flex rounded-md gap-2 py-2 font-bold items-center justify-center border-2 border-black duration-300 hover:border-red-400 hover:text-red-400"
+          className="w-full flex rounded-md gap-2 py-2 font-bold shadow-md items-center justify-center border-2 border-black duration-300 hover:border-red-400 hover:text-red-400"
           onClick={() => reset()}
         >
           <EraserIcon />
-          Reset
+          {clearText}
         </button>
       </div>
     </form>

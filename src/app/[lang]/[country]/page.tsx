@@ -106,7 +106,8 @@ export default async function Home({
     },
     { 
       text: translate('nav.contact'), 
-      to: '#contact'
+      to: '#contact',
+      isAccent: true
     },
   ]
 

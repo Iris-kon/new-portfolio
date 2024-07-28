@@ -2,13 +2,13 @@
   "nav": {
     "about": "Sobre",
     "contact": "Contato",
-    "work": "Trabalho"
+    "work": "Trabalhos"
   },
   "hero": {
     "line": "Íris Oliveira",
     "title": "Desenvolvedora Full Stack",
-    "subtitle": "Transformando ideas em realidade com habilidades em ReactJs, React Native e Node.js!",
-    "allWorks": "Veja meus trabalhos!"
+    "subtitle": "Com 3+ anos de experiência em ReactJS, NextJS, e React Native, crio interfaces impactantes e APIs robustas com Node.js e NestJS. Apaixonada por inovação e pronta para novos desafios tecnológicos.",
+    "cta": "Entre em contato!"
   },
   "habilities": {
     "front": "Por meio das minhas habilidades em React e NextJS, sou capaz de criar interfaces incríveis com foco em uma experiência de usuário de qualidade. Com minha vasta experiência no desenvolvimento de aplicativos móveis utilizando React Native, tenho a capacidade de criar experiências envolventes e nativas em dispositivos móveis. A combinação dessas tecnologias me permite oferecer soluções visualmente atraentes, funcionais e consistentes em diversas plataformas, proporcionando uma experiência excepcional aos usuários.",
@@ -22,7 +22,8 @@
   },
   "contact": {
     "title": "Vamos colaborar",
-    "paragraph": "Está pronta(o) para colaborar em projetos empolgantes? Vamos nos conectar e transformar suas ideias em realidade! Sinta-se à vontade para entrar em contato comigo hoje mesmo e vamos discutir como podemos trabalhar juntos para concretizar sua visão. Estou ansiosa para fazer parte da sua jornada e contribuir com minhas habilidades e expertise para criar algo extraordinário. Não hesite em me contatar e embarcar nessa aventura emocionante juntos!"
+    "paragraph": "Está pronta(o) para colaborar em projetos empolgantes? Vamos nos conectar e transformar suas ideias em realidade! Sinta-se à vontade para entrar em contato comigo hoje mesmo e vamos discutir como podemos trabalhar juntos para concretizar sua visão. Estou ansiosa para fazer parte da sua jornada e contribuir com minhas habilidades e expertise para criar algo extraordinário. Não hesite em me contatar e embarcar nessa aventura emocionante juntos!",
+    "whatsappCta": "Para um atendimento mais ágil e direto, entre em contato pelo WhatsApp. Estou aqui para ajudar e responder suas perguntas rapidamente!"
   },
   "forms": {
     "contact": {
@@ -39,7 +40,7 @@
     },
     "actions": {
       "send": "Enviar",
-      "reset": "Limpar"
+      "clear": "Limpar todos os campos"
     }
   }
 }

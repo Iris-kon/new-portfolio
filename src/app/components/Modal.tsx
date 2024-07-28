@@ -1,5 +1,4 @@
 import { ValidLocale } from '@/i18n';
-import { Github, LinkIcon, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Keyboard } from "swiper/modules"
@@ -8,6 +7,8 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/keyboard"
+import { RiGithubFill, RiLink } from '@remixicon/react';
+import { XIcon } from 'lucide-react';
 
 interface IWorks {
   title: string
@@ -71,7 +72,7 @@ export function Modal({ isOpen, onClose, title, slider, description, site, git }
               className='flex items-center gap-2 cursor-pointer px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
             >
               <div className='bg-black rounded-full p-1'>
-                <Github size={20} />
+                <RiGithubFill size={20} />
               </div>
               {git}
             </a>
@@ -83,7 +84,7 @@ export function Modal({ isOpen, onClose, title, slider, description, site, git }
               className='flex items-center gap-2 cursor-pointer px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
             >
               <div className='bg-black rounded-full p-1'>
-                <LinkIcon size={20} />
+                <RiLink size={20} />
               </div>
               {site}
             </a>
