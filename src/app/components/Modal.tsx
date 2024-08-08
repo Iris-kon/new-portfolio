@@ -69,7 +69,7 @@ export function Modal({ isOpen, onClose, title, slider, description, site, git }
             <a href={git}
               target="_blank"
               rel="noopener noreferrer"
-              className='flex items-center gap-2 cursor-pointer px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
+              className='flex items-center gap-2 cursor-pointer mb-2 px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
             >
               <div className='bg-black rounded-full p-1'>
                 <RiGithubFill size={20} />
@@ -81,7 +81,7 @@ export function Modal({ isOpen, onClose, title, slider, description, site, git }
             <a href={site}
               target="_blank"
               rel="noopener noreferrer"
-              className='flex items-center gap-2 cursor-pointer px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
+              className='flex items-center gap-2 cursor-pointer mb-2 px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
             >
               <div className='bg-black rounded-full p-1'>
                 <RiLink size={20} />
