@@ -29,69 +29,94 @@ export function Modal({ isOpen, onClose, title, slider, description, site, git }
   if (!isOpen) return null
 
   return (
-    <div className="z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
+    <dialog
+      open
+      className="z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50"
+      role="dialog"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-description"
+    >
       <div className="bg-white relative rounded shadow-lg w-[90%] md:w-1/2">
-        <div className='flex justify-between items-start'>
-          <h2 className="text-xl p-4 font-bold">{title}</h2>
 
-          <button onClick={onClose} className='hover:text-red-500 transition-colors p-1'>
+        <header className="flex justify-between items-start p-4">
+          <h2 id="modal-title" className="text-xl font-bold">{title}</h2>
+          <button
+            type="button"
+            onClick={onClose}
+            className="hover:text-red-500 transition-colors p-1"
+            aria-label="Close modal"
+          >
             <XIcon />
           </button>
-        </div>
-        <div className='pb-4'>
-          <Swiper
-            className='h-[50vw] md:h-[30vw] w-full'
-            modules={[Navigation, Pagination, Keyboard]}
-            slidesPerView={1}
-            keyboard
-            navigation={true}
-            loop={true}
-            pagination={{ clickable: true }}
-          >
-            {slider.map((i) => (
-              <SwiperSlide key={i.src}>
-                <div
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    position: "relative",
-                  }}
-                >
-                  <Image src={i.src} alt={i.alt} fill style={{ objectFit: "cover" }} />
+        </header>
+
+        <main className="pb-4">
+          <section className="swiper-container">
+            <Swiper
+              className="h-[50vw] md:h-[30vw] w-full"
+              modules={[Navigation, Pagination, Keyboard]}
+              slidesPerView={1}
+              keyboard
+              navigation
+              loop
+              pagination={{ clickable: true }}
+            >
+              {slider.map((i) => (
+                <SwiperSlide key={i.src}>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      position: "relative",
+                    }}
+                  >
+                    <Image src={i.src} alt={i.alt} fill style={{ objectFit: "cover" }} />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </section>
+
+          <section id="modal-description" className="p-4 text-gray-700 text-justify">
+            <p>{description}</p>
+          </section>
+
+          <footer>
+            {git && (
+              <a
+                href={git}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 cursor-pointer mb-2 px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800"
+                aria-label="Visit GitHub repository"
+              >
+                <div className="bg-black rounded-full p-1">
+                  <RiGithubFill size={20} />
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                {git}
+              </a>
+            )}
+            {site && (
 
-          <p className="text-gray-700 text-justify p-4">{description}</p>
+              <a
+                href={site}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 cursor-pointer mb-2 px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800"
+                aria-label="Visit website"
+              >
+                <div className="bg-black rounded-full p-1">
+                  <RiLink size={20} />
+                </div>
+                {site}
+              </a>
+            )}
+          </footer>
 
-          {git && (
-            <a href={git}
-              target="_blank"
-              rel="noopener noreferrer"
-              className='flex items-center gap-2 cursor-pointer mb-2 px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
-            >
-              <div className='bg-black rounded-full p-1'>
-                <RiGithubFill size={20} />
-              </div>
-              {git}
-            </a>
-          )}
-          {site && (
-            <a href={site}
-              target="_blank"
-              rel="noopener noreferrer"
-              className='flex items-center gap-2 cursor-pointer mb-2 px-4 transition-colors text-orange-400 hover:text-orange-600 visited:text-orange-800'
-            >
-              <div className='bg-black rounded-full p-1'>
-                <RiLink size={20} />
-              </div>
-              {site}
-            </a>
-          )}
-        </div>
+        </main>
 
       </div>
-    </div>
+    </dialog>
+
   )
 }

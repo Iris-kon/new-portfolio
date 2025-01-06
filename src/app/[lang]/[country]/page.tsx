@@ -112,12 +112,12 @@ export default async function Home({
   ]
 
   return (
-    <div className="bg-slate-100 w-full h-full">
+    <main className="bg-slate-100 w-full h-full">
       <Header nav={nav} />
       <Hero lang={language} />
       <Habilities lang={language} />
       <Work lang={language} works={data.worksRaw}  />
       <Contact lang={language} />
-    </div>
+    </main>
   )
 }

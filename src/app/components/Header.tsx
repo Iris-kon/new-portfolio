@@ -17,7 +17,7 @@ export function Header({ nav }: HeaderProps) {
 
   return (
     <>
-      <div className="fixed w-screen flex justify-between items-center px-8 py-2 bg-slate-100 z-20">
+      <header className="fixed w-screen flex justify-between items-center px-8 py-2 bg-slate-100 z-20">
         <Link href="/" className="text-3xl border-0">
           Íris
         </Link>
@@ -58,10 +58,10 @@ export function Header({ nav }: HeaderProps) {
           </nav>
           <LocaleSwitcher />
         </div>
-      </div>
+      </header>
 
 
-      <div className={`fixed bg-slate-100 ease-in-out duration-500 lg:hidden h-screen w-64 right-0 z-10 ${isSidebarOpen ? "translate-x-0 " : "translate-x-full"
+      <aside className={`fixed bg-slate-100 ease-in-out duration-500 lg:hidden h-screen w-64 right-0 z-10 ${isSidebarOpen ? "translate-x-0 " : "translate-x-full"
         }`}>
         <nav className='flex flex-col gap-4 pt-16 px-4'>
           {nav.map((n) => (
@@ -75,7 +75,7 @@ export function Header({ nav }: HeaderProps) {
             </Link>
           ))}
         </nav>
-      </div>
+      </aside>
     </>
   )
 }

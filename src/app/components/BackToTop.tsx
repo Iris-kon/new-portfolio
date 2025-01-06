@@ -39,6 +39,8 @@ export function BackToTop() {
         text-xs flex gap-2 ${isVisible ? 'opacity-100 z-50' : 'opacity-0 -z-10'}`
       }
       onClick={scrollToTop}
+      aria-label="Back to top"
+      aria-live="polite"
     >
       <ChevronUp size={40} />
     </button>

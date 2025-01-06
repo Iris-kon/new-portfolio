@@ -40,7 +40,6 @@ export async function Work({ lang, works }: WorkProps) {
             git={w.git}
           />
         ))}
-
       </div>
     </section>
   )

@@ -14,13 +14,16 @@ export async function Hero({ lang }: HeroProps) {
   return (
     <section className="w-full h-screen flex flex-col md:flex-row">
       <div className="max-w-[1000px] mr-auto px-8 pt-8 lg:pt-0 flex flex-col justify-center  h-full items-center  lg:items-start">
-        <div className="flex gap-2 items-center justify-center">
+        <header className="flex gap-2 items-center justify-center">
           <h1 className="text-2xl font-bold text-center lg:text-left">
             {translate('hero.line')}
           </h1>
-          <p className="text-3xl">|</p>
+          <span className="text-3xl" aria-hidden="true" >|</span>
           <a 
-            href="https://github.com/Iris-kon" 
+            href="https://github.com/Iris-kon"
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Visit  my GitHub profile" 
             className='group flex items-center justify-center hover:text-orange-500 transition-colors p-1'
           >
             <RiGithubFill size={30} />
@@ -31,7 +34,10 @@ export async function Hero({ lang }: HeroProps) {
             </span>
           </a>
           <a 
-            href="https://www.linkedin.com/in/iris-oliveira-k-on/" 
+            href="https://www.linkedin.com/in/iris-oliveira-k-on/"
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Visit  my linkedin profile"
             className='group flex items-center justify-center hover:text-blue-900 transition-colors p-1'
           >
             <RiLinkedinBoxFill size={30} />
@@ -43,6 +49,9 @@ export async function Hero({ lang }: HeroProps) {
           </a>
           <a 
             href="mailto://irisoliveira.k.on@gmail.com" 
+            aria-label="Send me a email"
+            target="_blank" 
+            rel="noopener noreferrer"
             className='group flex items-center justify-center hover:text-green-500 transition-colors p-1'
           >
             <MailIcon size={30} />
@@ -52,7 +61,7 @@ export async function Hero({ lang }: HeroProps) {
               E-mail
             </span>
           </a>
-        </div>
+        </header>
         
         <h2 className="text-4xl sm:text-7xl font-bold text-center lg:text-left">
           {translate('hero.title')}
@@ -75,7 +84,7 @@ export async function Hero({ lang }: HeroProps) {
           src="/imgs/avatar.png"
           sizes="(max-width: 768px) 100vw"
           fill
-          alt="avatar"
+          alt="Iris avatar"
           priority={true}
         />
       </div>
