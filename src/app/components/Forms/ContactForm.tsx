@@ -1,8 +1,7 @@
 'use client'
 
 import { yupResolver } from '@hookform/resolvers/yup'
-import { EraserIcon, Loader2Icon, LoaderIcon, MailIcon } from 'lucide-react'
-import { NextApiResponse } from 'next'
+import { EraserIcon, Loader2Icon, MailIcon } from 'lucide-react'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { toast } from 'react-toastify'
@@ -16,6 +15,12 @@ interface ContactFormProps {
   mail: string
   message: string
   errorsT: {
+    name: string
+    pronoun: string
+    mail: string
+    message: string
+  },
+  placeholders: {
     name: string
     pronoun: string
     mail: string
@@ -38,6 +43,7 @@ export function ContactForm({
   mail,
   message,
   errorsT,
+  placeholders
 }: ContactFormProps) {
   const [isLoading, setIsLoading] = useState(false)
 
@@ -102,8 +108,9 @@ export function ContactForm({
       onSubmit={handleSubmit(handleContactSubmit)}
     >
       <div className="w-full">
+        <label htmlFor="name" className='ml-2'>{name}:</label>
         <input
-          placeholder={name}
+          placeholder={placeholders.name}
           className="w-full h-12 shadow-md rounded-md px-2 text-lg"
           {...register('name')}
         />
@@ -113,8 +120,9 @@ export function ContactForm({
       </div>
 
       <div className="w-full">
+        <label htmlFor="pronoun" className='ml-2'>{pronoun}:</label>
         <input
-          placeholder={pronoun}
+          placeholder={placeholders.pronoun}
           className="w-full h-12 shadow-md rounded-md px-2 text-lg"
           {...register('pronoun')}
         />
@@ -126,8 +134,9 @@ export function ContactForm({
       </div>
 
       <div className="w-full">
+        <label htmlFor="email" className='ml-2'>{mail}:</label>
         <input
-          placeholder={mail}
+          placeholder={placeholders.mail}
           className="w-full h-12 shadow-md rounded-md px-2 text-lg"
           type="email"
           {...register('email')}
@@ -138,8 +147,9 @@ export function ContactForm({
       </div>
 
       <div className="w-full">
+        <label htmlFor="message" className='ml-2'>{message}:</label>
         <textarea
-          placeholder={message}
+          placeholder={placeholders.message}
           className="w-full rounded-md shadow-md px-2 pt-2 text-lg"
           rows={5}
           cols={4}
@@ -154,7 +164,7 @@ export function ContactForm({
 
       <div className="flex gap-4">
         <button
-          className="w-full flex rounded-md gap-2 py-2 font-bold shadow-md items-center justify-center bg-orange-400 text-slate-100 duration-300 hover:bg-orange-600"
+          className="w-full flex rounded-md gap-2 py-2 font-bold shadow-md items-center justify-center bg-orange-400 text-gray-800 duration-300 hover:bg-orange-600"
           type="submit"
           disabled={isLoading}
         >

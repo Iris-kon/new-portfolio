@@ -36,6 +36,12 @@
         "pronoun": "Pronouns cannot be blank.",
         "mail": "Insert a valid email.",
         "message": "Message cannot be blank."
+      },
+      "placeholders": {
+        "name": "Jonh Doe",
+        "pronoun": "He/Him",
+        "mail": "jonhdoe@sample.com",
+        "message": "i want to create a web system..."
       }
     },
     "actions": {

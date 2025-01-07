@@ -36,6 +36,12 @@
         "pronoun": "Pronomes não pode ser vazio.",
         "mail": "Insira um email válido.",
         "message": "Mensagem não pode ser vazia."
+      },
+      "placeholders": {
+        "name": "João Silva",
+        "pronoun": "Ele/Dele",
+        "mail": "joaosilva@exemplo.com",
+        "message": "Eu quero contruir um sistema..."
       }
     },
     "actions": {

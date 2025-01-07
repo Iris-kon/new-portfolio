@@ -36,7 +36,7 @@ export function Header({ nav }: HeaderProps) {
                     className="flex ease-in-out
                       items-center justify-center duration-300 
                       transition  text-base px-2 
-                      rounded-md shadow-sm  text-white bg-orange-400
+                      rounded-md shadow-sm  text-gray-800 bg-orange-400
                       hover:bg-orange-600 hover:scale-110"
                     href={n.to}
                   >

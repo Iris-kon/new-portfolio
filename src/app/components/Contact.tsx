@@ -22,6 +22,12 @@ export async function Contact({ lang }: ContactProps) {
       mail: translate('forms.contact.errors.mail'),
       message: translate('forms.contact.errors.message'),
     },
+    placeholders: {
+      name: translate('forms.contact.placeholders.name'),
+      pronoun: translate('forms.contact.placeholders.pronoun'),
+      mail: translate('forms.contact.placeholders.mail'),
+      message: translate('forms.contact.placeholders.message'),
+    }
   }
 
   return (
@@ -42,7 +48,7 @@ export async function Contact({ lang }: ContactProps) {
           className="
             w-full flex rounded-md gap-2 py-4 font-bold 
             items-center justify-center 
-            text-white bg-green-400 shadow-md
+            text-gray-800 bg-green-400 shadow-md
             duration-300 transition-colors hover:bg-green-600"
         >
           <RiWhatsappLine />
@@ -58,6 +64,7 @@ export async function Contact({ lang }: ContactProps) {
           mail={formTranslations.mail}
           message={formTranslations.message}
           errorsT={formTranslations.errors}
+          placeholders={formTranslations.placeholders}
         />
       </div>
     </section>

@@ -73,7 +73,7 @@ export async function Hero({ lang }: HeroProps) {
           href="#contact"
           className="
             cursor-pointer transition ease-in-out w-48 font-semibold flex shadow-md 
-            items-center justify-center py-3 rounded-md text-gray-100 
+            items-center justify-center py-3 rounded-md text-gray-800 
             bg-orange-400 duration-300 hover:bg-orange-600 hover:scale-110"
         >
           {translate('hero.cta')}
