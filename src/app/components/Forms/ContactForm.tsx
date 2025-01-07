@@ -110,6 +110,7 @@ export function ContactForm({
       <div className="w-full">
         <label htmlFor="name" className='ml-2'>{name}:</label>
         <input
+          id='name'
           placeholder={placeholders.name}
           className="w-full h-12 shadow-md rounded-md px-2 text-lg"
           {...register('name')}
@@ -122,6 +123,7 @@ export function ContactForm({
       <div className="w-full">
         <label htmlFor="pronoun" className='ml-2'>{pronoun}:</label>
         <input
+          id='pronoun'
           placeholder={placeholders.pronoun}
           className="w-full h-12 shadow-md rounded-md px-2 text-lg"
           {...register('pronoun')}
@@ -136,6 +138,7 @@ export function ContactForm({
       <div className="w-full">
         <label htmlFor="email" className='ml-2'>{mail}:</label>
         <input
+         id="email"
           placeholder={placeholders.mail}
           className="w-full h-12 shadow-md rounded-md px-2 text-lg"
           type="email"
@@ -149,6 +152,7 @@ export function ContactForm({
       <div className="w-full">
         <label htmlFor="message" className='ml-2'>{message}:</label>
         <textarea
+          id="message"
           placeholder={placeholders.message}
           className="w-full rounded-md shadow-md px-2 pt-2 text-lg"
           rows={5}
@@ -159,7 +163,7 @@ export function ContactForm({
           <p className="text-base pt-2 text-red-400">
             {errors.message.message}
           </p>
-        ) : null}
+        ) : null} 
       </div>
 
       <div className="flex gap-4">
